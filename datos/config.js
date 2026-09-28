@@ -38,25 +38,25 @@ window.DATOS.config = {
      ========================================================= */
 
   historia: [
-    { titulo: "Los comienzos", texto: "El Club Deportivo Rus E.F. nació del empeño de un grupo de vecinos que querían que el pueblo tuviera un equipo con el que identificarse. Desde los primeros partidos en el campo municipal, el club ha crecido al ritmo de su cantera." },
-    { titulo: "Décadas de fútbol", texto: "A lo largo de los años el club ha vivido ascensos, temporadas difíciles y, sobre todo, una afición que nunca ha dejado solo al equipo. La grada de Rus es pequeña, pero ruidosa, y ese apoyo ha mantenido vivo el proyecto temporada tras temporada." },
+    { titulo: "Los comienzos", texto: "El Club Deportivo Rus nació del empeño de un grupo de vecinos que querían que el pueblo tuviera un equipo con el que identificarse, corrían  los años 50. Desde los primeros partidos en el campo municipal, ubicado al principio en la zona de El Prado, el club ha crecido al ritmo de su cantera." },
+    { titulo: "Décadas de fútbol", texto: "A lo largo de los años el club ha vivido ascensos, temporadas difíciles y, sobre todo, una afición que nunca ha dejado solo al equipo. La grada de Rus es grande y ruidosa, y ese apoyo ha mantenido vivo el proyecto temporada tras temporada." },
     { titulo: "Nuestra filosofía", texto: "Formar jugadores y personas. El trabajo de base, el respeto al rival y el compromiso con el pueblo son las señas de identidad que el club quiere mantener." }
   ],
 
   /* --- Contacto --- */
   contacto: {
-    direccion: "Campo Municipal de Deportes",
+    direccion: "Calle Tercia, 6",
     localidad: "Rus (Jaén)",
-    telefono: "",
-    email: "cdeportivorus@gmail.com",
+    telefono: "654 86 33 21",
+    email: "cdrusef@outlook.es",
     horario: "Lunes a viernes, de 18:00 a 20:00"
   },
 
   /* --- Redes sociales --- */
   // Deja "" en las que no tengas. Para quitar una, borra la línea entera.
   redes: {
-    facebook: "",
-    instagram: "",
+    facebook: "CD RUS senior",
+    instagram: "CD RUS senior",
     twitter: ""
   }
 };
