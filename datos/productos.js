@@ -27,10 +27,10 @@
 
    Configura en este mismo archivo:
      whatsapp ........ número del club con prefijo del país, solo números y sin
-                       espacios ni el signo + (ej. "34600112233"). Si lo dejas
+                       espacios ni el signo + (ej. "34654863321"). Si lo dejas
                        "", el botón usará el correo electrónico en su lugar.
-     emailPedidos .... correo al que llegan los pedidos.
-     formaPago ....... frase que explica cómo se paga y cómo se recoge.
+     emailPedidos .... cdrusef@outlook.es
+     formaPago ....... Pagos al contado a la petición del producto
    ========================================================= */
 
 window.DATOS = window.DATOS || {};
@@ -51,7 +51,7 @@ window.DATOS.productos = {
   productos: [
     {
       nombre: "Camiseta oficial 2026/2027",
-      precio: "35 €",
+      precio: "25 €",
       antes: "",
       categoria: "Ropa",
       descripcion: "Camiseta de juego del primer equipo, tejido transpirable.",
