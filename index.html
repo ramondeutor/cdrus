@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club Deportivo Rus E.F. — Web oficial</title>
+<meta name="description" content="Web oficial del Club Deportivo Rus E.F. (Rus, Jaén): historia, calendario de partidos, clasificación, patrocinios y contacto.">
+<meta name="theme-color" content="#0b2545">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Club Deportivo Rus E.F.">
+<meta property="og:description" content="Historia, calendario, clasificación, patrocinadores y contacto del Club Deportivo Rus E.F.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b2545'/><text x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%23e63946'>R</text></svg>">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<a class="saltar" href="#inicio">Saltar al contenido principal</a>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="#inicio">
+      <img class="marca__escudo" data-escudo src="img/escudo.png" alt="Escudo del Club Deportivo Rus E.F.">
+      <span class="marca__texto">
+        <strong>Club Deportivo Rus E.F.</strong>
+        <small>Rus · Jaén</small>
+      </span>
+    </a>
+
+    <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <a href="#historia">Historia</a>
+      <a href="#calendario">Calendario</a>
+      <a href="#clasificacion">Clasificación</a>
+      <a href="#patrocinios">Patrocinios</a>
+      <a href="#patrocinadores">Patrocinadores</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PORTADA ============ -->
+  <section class="hero" id="inicio">
+    <img class="hero__fondo" data-portada src="img/portada.jpg" alt="">
+    <div class="contenedor hero__texto">
+      <p class="hero__lema" data-campo="lema">Orgullo de un pueblo, fútbol de cantera</p>
+      <h1 data-campo="nombre">Club Deportivo Rus E.F.</h1>
+      <p class="hero__sub" data-campo="temporada">Temporada 2026/2027 · Rus (Jaén)</p>
+      <p class="hero__acciones">
+        <a class="boton boton--principal" href="#calendario">Ver calendario</a>
+        <a class="boton boton--fantasma" href="#patrocinios">Patrocina al club</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="seccion" id="historia">
+    <div class="contenedor">
+      <p class="etiqueta">Nuestra identidad</p>
+      <h2>Historia del club</h2>
+      <div class="historia" data-historia>
+        <!-- EDITAR: borra este bloque de ejemplo y escribe tu historia real. -->
+        <p><em>Este texto es de ejemplo. Sustitúyelo por la historia real del club: es la única parte de esta sección que debes borrar.</em></p>
+        <p>El Club Deportivo Rus E.F. nació del empeño de un grupo de vecinos que querían que el pueblo tuviera un equipo con el que identificarse. Desde sus primeros partidos en el campo municipal, el club ha crecido al ritmo de su cantera: cientos de niños y niñas de Rus han vestido la camiseta y han aprendido aquí que ganar no es lo único que importa.</p>
+        <p>A lo largo de las décadas, el club ha vivido ascensos, temporadas difíciles y, sobre todo, una afición que nunca ha dejado solo al equipo. La grada de Rus es pequeña, pero ruidosa; y ese apoyo es el que ha mantenido vivo el proyecto año tras año.</p>
+        <h3>Nuestra filosofía</h3>
+        <p>Formar jugadores y personas. El trabajo de base, el respeto al rival y el compromiso con el pueblo son las señas de identidad que el club quiere mantener temporada tras temporada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALENDARIO ============ -->
+  <section class="seccion seccion--gris" id="calendario">
+    <div class="contenedor">
+      <p class="etiqueta">Competición</p>
+      <h2>Calendario de partidos</h2>
+      <p class="seccion__intro">Partidos del primer equipo, con fecha, hora, rival y condición de local o visitante.</p>
+
+      <div class="filtros" data-filtros-calendario role="group" aria-label="Filtrar calendario"></div>
+
+      <div class="tabla-caja">
+        <table class="tabla tabla--calendario">
+          <caption class="oculto">Calendario de partidos del Club Deportivo Rus E.F.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jornada</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Hora</th>
+              <th scope="col">Rival</th>
+              <th scope="col">Condición</th>
+              <th scope="col">Resultado</th>
+            </tr>
+          </thead>
+          <tbody data-calendario></tbody>
+        </table>
+      </div>
+
+      <p class="nota nota--origen" data-origen-calendario></p>
+
+      <p class="acciones-fuente">
+        <a class="boton boton--secundario" href="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120" target="_blank" rel="noopener">Consultar en la RFAF</a>
+      </p>
+
+      <details class="ayuda">
+        <summary>Cómo actualizar el calendario</summary>
+        <p>El calendario se lee del archivo <code>datos/calendario.js</code>. Copia los datos de cada jornada desde la web de la Real Federación Andaluza de Fútbol y pégalos ahí, respetando el formato del bloque de ejemplo que encontrarás en el propio archivo.</p>
+        <p>El resultado se rellena solo cuando el partido ya se ha jugado. Si lo dejas vacío, aparece un guion.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CLASIFICACIÓN ============ -->
+  <section class="seccion" id="clasificacion">
+    <div class="contenedor">
+      <p class="etiqueta">Tabla</p>
+      <h2>Clasificación</h2>
+      <p class="seccion__intro" data-titulo-clasificacion></p>
+
+      <div class="tabla-caja">
+        <table class="tabla tabla--clasificacion">
+          <caption class="oculto">Clasificación del grupo del Club Deportivo Rus E.F.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Pos.</th>
+              <th scope="col">Equipo</th>
+              <th scope="col">PJ</th>
+              <th scope="col">G</th>
+              <th scope="col">E</th>
+              <th scope="col">P</th>
+              <th scope="col">GF</th>
+              <th scope="col">GC</th>
+              <th scope="col">Pts.</th>
+            </tr>
+          </thead>
+          <tbody data-clasificacion></tbody>
+        </table>
+      </div>
+
+      <p class="nota nota--origen" data-origen-clasificacion></p>
+
+      <p class="acciones-fuente">
+        <a class="boton boton--secundario" href="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120" target="_blank" rel="noopener">Consultar en la RFAF</a>
+      </p>
+
+      <details class="ayuda">
+        <summary>Cómo actualizar la clasificación</summary>
+        <p>La tabla se lee del archivo <code>datos/clasificacion.js</code>. Es cuestión de copiar las filas de la clasificación de la RFAF una vez por semana. El nombre <strong>Club Deportivo Rus E.F.</strong> se resalta automáticamente, y la primera y la última posición quedan marcadas como ascenso y descenso.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ TARIFA DE PATROCINIOS ============ -->
+  <section class="seccion seccion--gris" id="patrocinios">
+    <div class="contenedor">
+      <p class="etiqueta">Colabora</p>
+      <h2>Tarifa de patrocinios</h2>
+      <p class="seccion__intro" data-campo="patrocinios-intro">Estas son las opciones para las empresas y comercios que quieran apoyar al club esta temporada. Cada pack combina presencia en la equipación, el campo y esta web.</p>
+
+      <div class="packs" data-packs></div>
+
+      <div class="condiciones">
+        <h3>Condiciones</h3>
+        <ul data-condiciones></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PATROCINADORES ============ -->
+  <section class="seccion" id="patrocinadores">
+    <div class="contenedor">
+      <p class="etiqueta">Gracias</p>
+      <h2>Patrocinadores</h2>
+      <p class="seccion__intro" data-campo="patrocinadores-intro">Las empresas y comercios que hacen posible que el club siga compitiendo. Pincha en cualquiera para visitar su web.</p>
+
+      <div class="patrocinadores" data-patrocinadores></div>
+
+      <p class="nota" data-patrocinadores-nota></p>
+
+      <p class="acciones-fuente">
+        <a class="boton boton--principal" href="#contacto">Quiero ser patrocinador</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ VENTA DE PRODUCTOS DEL CLUB ============ -->
+  <section class="seccion seccion--gris" id="tienda">
+    <div class="contenedor">
+      <p class="etiqueta">Tienda oficial</p>
+      <h2>Venta de productos del club</h2>
+      <p class="seccion__intro" data-campo="productos-intro"></p>
+
+      <div class="filtros" data-filtros-tienda role="group" aria-label="Filtrar productos"></div>
+
+      <div class="productos" data-productos></div>
+
+      <div class="pago">
+        <h3>Cómo comprar</h3>
+        <p data-forma-pago></p>
+      </div>
+
+      <p class="nota" data-productos-nota></p>
+
+      <details class="ayuda">
+        <summary>Cómo gestionar la tienda</summary>
+        <p>Los productos se editan en el archivo <code>datos/productos.js</code>. Ahí mismo se configura el número de WhatsApp y el correo donde quieres recibir los pedidos.</p>
+        <p>El botón de cada producto prepara el pedido y lo envía por WhatsApp o correo con el producto, la talla y el precio ya escritos. Después confirmas disponibilidad y cobras al entregarlo.</p>
+        <p>Para marcar un producto como agotado, pon <code>stock: false</code> en su bloque.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="seccion seccion--azul" id="contacto">
+    <div class="contenedor">
+      <p class="etiqueta">Hablemos</p>
+      <h2>Contacto</h2>
+      <p class="seccion__intro">Para patrocinios, fichajes, cantera o cualquier consulta, estamos a tu disposición.</p>
+
+      <div class="contacto">
+        <div class="contacto__ficha">
+          <h3>Club Deportivo Rus E.F.</h3>
+          <ul class="datos" data-contacto></ul>
+          <p class="redes" data-redes></p>
+        </div>
+
+        <form class="formulario" data-formulario aria-label="Formulario de contacto">
+          <div class="campo">
+            <label for="nombre">Nombre y apellidos</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto">
+              <option>Patrocinio</option>
+              <option>Cantera / fichajes</option>
+              <option>Prensa y comunicación</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <button class="boton boton--principal" type="submit">Enviar por correo</button>
+          <p class="formulario__aviso">El botón abre tu programa de correo con el mensaje ya escrito. Si prefieres, escríbenos directamente a la dirección que figura a la izquierda.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__fila">
+    <p><strong>Club Deportivo Rus E.F.</strong> · Rus, Jaén</p>
+    <p>Club nº 70092 · Delegación de Jaén (RFAF)</p>
+    <p data-campo="temporada-pie">Temporada 2026/2027</p>
+  </div>
+</footer>
+
+<a class="arriba" href="#inicio" aria-label="Volver arriba">↑</a>
+
+<script src="datos/config.js"></script>
+<script src="datos/calendario.js"></script>
+<script src="datos/clasificacion.js"></script>
+<script src="datos/patrocinios.js"></script>
+<script src="datos/patrocinadores.js"></script>
+<script src="datos/productos.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>
