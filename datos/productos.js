@@ -21,7 +21,7 @@
 
    CÓMO SE VENDE (lee esto, es importante):
    Como el alojamiento es gratuito y no hay servidor ni pasarela de pago, el
-   botón de cada producto abre el WhatsApp o el correo del club con el pedido
+   botón de cada producto abre el WhatsApp: "34654863321" o el correo del club con el pedido
    ya escrito: producto, talla y precio. Así el club recibe el pedido, confirma
    disponibilidad y cobra en mano o por transferencia.
 
@@ -29,7 +29,7 @@
      whatsapp ........ número del club con prefijo del país, solo números y sin
                        espacios ni el signo + (ej. "34654863321"). Si lo dejas
                        "", el botón usará el correo electrónico en su lugar.
-     emailPedidos .... cdrusef@outlook.es
+     emailPedidos .... "cdrusef@outlook.es"
      formaPago ....... Pagos al contado a la petición del producto
    ========================================================= */
 
@@ -40,8 +40,8 @@ window.DATOS.productos = {
   intro: "La equipación y los complementos oficiales del club. Los pedidos se hacen por WhatsApp o correo y se recogen en el campo municipal.",
 
   /* -------- DATOS PARA RECIBIR LOS PEDIDOS (edita aquí) -------- */
-  whatsapp: "",                          // ej. "34600112233"
-  emailPedidos: "cdeportivorus@gmail.com",
+  whatsapp: "34654863321",                          // ej. "34600112233"
+  emailPedidos: "cdrusef@outlook.es",
 
   formaPago: "Pedido por WhatsApp o correo. Pagas al recogerlo en el campo municipal, en efectivo o por transferencia.",
 
