@@ -25,7 +25,7 @@ window.DATOS.patrocinadores = {
 
   /* -------- LISTA DE PATROCINADORES (edita desde aquí) -------- */
   lista: [
-    // { nombre: "Taller Antonio Anguís", tipo: "Colaborador", logo: "img/tallerantonioanguis.jpg", logoAlt: "Logo de Antonio Anguís"}
+     { nombre: "Taller Antonio Anguís", tipo: "Colaborador", logo: "img/tallerantonioanguis.jpg", logoAlt: "Logo de Antonio Anguís"}
   
   
 };
