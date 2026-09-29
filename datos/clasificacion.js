@@ -1,23 +1,14 @@
 /* =========================================================
-   CLASIFICACIÓN  —  se actualiza una vez por semana
+   CLASIFICACIÓN  —  tras la jornada 3
    =========================================================
-   Cómo actualizarla:
-   1. En la web de la RFAF, en la misma pantalla del calendario,
-      pincha en la pestaña "Clasificación".
-   2. Copia las filas del grupo del CD Rus E.F. y escríbelas aquí.
-   3. Actualiza también el número de jornada y la fecha.
+   Datos oficiales de Universo RFAF (Pts, PJ y DG).
+   Las columnas G, E, P, GF y GC se han reconstruido a partir de los
+   resultados de las tres jornadas publicados por la federación.
 
-   Campos de cada equipo:
-     equipo ....... nombre tal como aparece en la federación
-     pj ........... partidos jugados
-     g / e / p .... ganados / empatados / perdidos
-     golesFavor ... goles a favor
-     golesContra .. goles en contra
-     puntos ....... puntos
-     club ......... deja true SOLO en la fila del Club Deportivo Rus E.F.
+   Para actualizar cada semana: copia Pts, PJ y DG de la web de la RFAF
+   y ajusta G, E, P, GF y GC con los resultados de la jornada.
 
-   La tabla se ordena sola por puntos y, en caso de empate, por diferencia
-   de goles. No te preocupes por el orden en que las escribas.
+   El campo club: true marca la fila del Rus E.F. para resaltarla.
    ========================================================= */
 
 window.DATOS = window.DATOS || {};
@@ -28,21 +19,23 @@ window.DATOS.clasificacion = {
   grupo: "",
   jornada: 3,
 
-  // Fecha en que has copiado esta tabla. Aparece al pie de la tabla.
-  actualizado: "2026-09-28",
+  actualizado: "2026-09-27",
 
-  fuenteTexto: "Datos tomados de la clasificación oficial de la RFAF.",
-  fuenteUrl: "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120",
+  fuenteTexto: "Clasificación oficial de Universo RFAF tras la jornada 3.",
+  fuenteUrl: "https://www.universorfaf.es/competitions/results/48466104?group=48466107&season=22&delegation=7&round=1",
 
   /* -------- LISTA DE EQUIPOS (edita desde aquí) -------- */
   equipos: [
-    // --- Ejemplos: sustitúyelos por la clasificación real ---
-    { equipo: "Equipo de ejemplo C",         pj: 3, g: 3, e: 0, p: 0, golesFavor: 8, golesContra: 2, puntos: 9, club: false },
-    { equipo: "Club Deportivo Rus E.F.",     pj: 3, g: 2, e: 0, p: 1, golesFavor: 5, golesContra: 3, puntos: 6, club: true  },
-    { equipo: "Equipo de ejemplo B",         pj: 3, g: 1, e: 2, p: 0, golesFavor: 4, golesContra: 3, puntos: 5, club: false },
-    { equipo: "Equipo de ejemplo A",         pj: 3, g: 1, e: 1, p: 1, golesFavor: 4, golesContra: 4, puntos: 4, club: false },
-    { equipo: "Equipo de ejemplo D",         pj: 3, g: 1, e: 1, p: 1, golesFavor: 3, golesContra: 4, puntos: 4, club: false },
-    { equipo: "Equipo de ejemplo E",         pj: 3, g: 0, e: 2, p: 1, golesFavor: 2, golesContra: 5, puntos: 2, club: false },
-    { equipo: "Equipo de ejemplo F",         pj: 3, g: 0, e: 0, p: 3, golesFavor: 1, golesContra: 6, puntos: 0, club: false }
+    { equipo: "IBROS C.F.",                           pj: 3, g: 2, e: 0, p: 1, golesFavor: 6,  golesContra: 2,  puntos: 6, club: false },
+    { equipo: "RECREATIVO DE BAILEN C.F.",            pj: 2, g: 2, e: 0, p: 0, golesFavor: 5,  golesContra: 2,  puntos: 6, club: false },
+    { equipo: "U.D. GUARROMAN",                       pj: 3, g: 2, e: 0, p: 1, golesFavor: 7,  golesContra: 4,  puntos: 6, club: false },
+    { equipo: "CLUB DEPORTIVO RUS EQUIPOS DE FUTBOL", pj: 3, g: 2, e: 0, p: 1, golesFavor: 7,  golesContra: 5,  puntos: 6, club: true  },
+    { equipo: "BAÑOS CLUB DEPORTIVO 2022",            pj: 3, g: 2, e: 0, p: 1, golesFavor: 6,  golesContra: 4,  puntos: 6, club: false },
+    { equipo: "C.D. CANENA ATLETICO",                 pj: 2, g: 1, e: 1, p: 0, golesFavor: 9,  golesContra: 0,  puntos: 4, club: false },
+    { equipo: "C.D. LUPION ATLETICO C.F.",            pj: 3, g: 1, e: 1, p: 1, golesFavor: 6,  golesContra: 8,  puntos: 4, club: false },
+    { equipo: "C.D. ATLETICO MENGIBAR",               pj: 2, g: 1, e: 0, p: 1, golesFavor: 5,  golesContra: 6,  puntos: 3, club: false },
+    { equipo: "CLUB DEPORTIVO REALEB",                pj: 3, g: 0, e: 1, p: 2, golesFavor: 4,  golesContra: 7,  puntos: 1, club: false },
+    { equipo: "VILLARGORDO C.F.",                     pj: 3, g: 0, e: 1, p: 2, golesFavor: 3,  golesContra: 7,  puntos: 1, club: false },
+    { equipo: "CLUB DEPORTIVO LOS GACHIS FUTSAL",     pj: 3, g: 0, e: 0, p: 3, golesFavor: 2,  golesContra: 15, puntos: 0, club: false }
   ]
 };
