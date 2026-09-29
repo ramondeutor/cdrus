@@ -7,6 +7,7 @@ window.DATOS.patrocinadores = {
   nota: "Si tu negocio quiere aparecer aquí, escríbenos desde la sección de contacto.",
 
   lista: [
-    { nombre: "Taller Antonio Anguís", tipo: "Colaborador", logo: "img/tallerantonioanguis.jpg", logoAlt: "Logo del Taller Antonio Anguís", web: "" }
+    { nombre: "Taller Antonio Anguís", tipo: "Colaborador", logo: "img/tallerantonioanguis.jpg", logoAlt: "Logo del Taller Antonio Anguís", web: "" },
+    { nombre: "Suroliva", tipo: "Colaborador", logo: "img/suroliva.jpg", logoAlt: "Logo de Suroliva", web: "" }
   ]
 };
