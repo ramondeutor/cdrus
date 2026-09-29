@@ -243,11 +243,37 @@
       cuerpoClasif.appendChild(tr);
     }
 
-    var nombreClub = (CONFIG.nombreClub || "").toLowerCase();
+    /* Reconocimiento del nombre del club en la clasificación.
+       Acepta varias formas porque la federación lo escribe distinto
+       en cada sitio ("Club Deportivo Rus E.F.", "CLUB DEPORTIVO RUS
+       EQUIPOS DE FUTBOL"...). Compara sin mayúsculas, sin tildes y
+       sin signos de puntuación, y basta con que coincida la palabra
+       clave ("rus"). */
+    function normalizar(texto) {
+      return String(texto || "")
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")   // quita tildes
+        .replace(/[^a-z0-9 ]/g, " ")                         // quita puntos y signos
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    var nombreClub = normalizar(CONFIG.nombreClub);
+    // Palabras clave que identifican al club aunque el nombre cambie.
+    var claveClub = (CONFIG.claveClasificacion || "rus").toLowerCase();
+
+    function esFilaDelClub(equipo) {
+      var nombre = normalizar(equipo);
+      if (!nombre) return false;
+      if (nombreClub && nombre === nombreClub) return true;
+      // Coincidencia por palabra clave (el nombre oficial de la federación
+      // incluye "rus" aunque el resto del nombre no coincida).
+      return new RegExp("(^| )" + claveClub + "( |$)").test(nombre);
+    }
+
     filas.forEach(function (eq, i) {
       var pos = i + 1;
-      var esClub = eq.club === true ||
-        (eq.equipo && nombreClub && eq.equipo.toLowerCase() === nombreClub);
+      var esClub = eq.club === true || esFilaDelClub(eq.equipo);
       var clase = "";
       if (esClub) clase += " equipo-club";
       if (pos === 1) clase += " pos-ascenso";
